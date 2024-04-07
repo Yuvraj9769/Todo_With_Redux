@@ -24,7 +24,7 @@ const TodoList = () => {
       <ul className="py-2 px-1 flex w-full flex-col items-center gap-5">
         {todos.map((e, ind) => (
           <li
-            className={`w-full flex text-black text-[22px] font-semibold px-2 gap-5 sm:gap-0 flex-col sm:flex-row py-3 items-center justify-between border border-teal-300 rounded-lg bg-slate-50 ${
+            className={`w-full flex text-black text-[22px] font-semibold px-2 gap-5 sm:gap-0 flex-col sm:flex-row py-3 items-center justify-between border border-teal-300 rounded-lg sm:text-start text-center bg-slate-50 ${
               checkUpdate && todos.indexOf(upDateval) === ind
                 ? "pointer-events-none opacity-80"
                 : ""
