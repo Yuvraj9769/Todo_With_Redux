@@ -7,7 +7,7 @@ const AddTodo = () => {
     useContext(TodoContext);
   const inpData = useRef("");
 
-  if (checkUpdate) {
+  if (checkUpdate && todos.length !== 0) {
     inpData.current.value = upDateval?.text;
   }
 
@@ -53,7 +53,7 @@ const AddTodo = () => {
             e.key === "Enter" && (checkUpdate ? updateData() : getData())
           }
         />
-        {checkUpdate ? (
+        {checkUpdate && todos.length !== 0 ? (
           <button
             className="bg-teal-500 px-5 py-3 rounded-lg text-base text-slate-50 font-semibold hover:bg-teal-600"
             onClick={updateData}
